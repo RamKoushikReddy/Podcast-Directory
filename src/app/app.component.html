@@ -3,14 +3,16 @@
     <h1>{{title}}</h1>
     <h3>{{description}}</h3>
   </div>
+  <br><br>
 
-  <div style="width: 300px;">
+  <div style="width: 50%;">
     <form (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label for="item">Item</label>
-        <input type="text" class="form-control" placeholder="Enter content..." id="item" required
+        <label for="item">Enter your Podcast title</label>
+        <input type="text" class="form-control" placeholder="Enter here..." id="item" required
           [(ngModel)]="itemValue" name="item">
       </div>
+      <br><br>
 
       <div class="btn-group">
         <button type="submit" class="btn btn-success">Submit</button>
@@ -18,7 +20,7 @@
     </form>
   </div>
 
-  <h2>Content from Firebase</h2>
+  <h2>Your favroute Podcasts</h2>
   <div class="col-md-3">
     <pre *ngFor="let item of items | async">{{item.content}}> </pre>
   </div>

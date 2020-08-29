@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular8Firebase';
-  description = 'Angular-Fire-Demo';
+  title = 'Podcast-Directory';
+  description = 'Add your favourate podcast link in the below form';
 
   itemValue = '';
   items: Observable<any[]>;
