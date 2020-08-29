@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Podcast-Directory"
+    }
+  },
+  "defaultProject": "Podcast-Directory",
+  "cli": {
+    "analytics": "1207246c-c443-41e8-9986-d2b17996c581"
+  }
 }
