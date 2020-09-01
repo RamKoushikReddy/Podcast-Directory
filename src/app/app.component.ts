@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ServiceService} from './service.service'
 
 @Component({
   selector: 'app-root',
@@ -12,10 +12,15 @@ export class AppComponent {
   title = 'Podcast-Directory';
   description = 'Add your favourate podcast link in the below form';
 
-  itemValue = '';
-  items: Observable<any[]>;
 
-  constructor(public db: AngularFireDatabase) { }
+
+  constructor(private service: ServiceService) { }
+  
+  ngOninit() {
+    this.service.getmethod().subscribe(podcast1 => { 
+      console.log(podcast1);
+    })
+   }
 
  
 }
