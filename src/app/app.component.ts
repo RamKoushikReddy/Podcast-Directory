@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -14,12 +15,7 @@ export class AppComponent {
   itemValue = '';
   items: Observable<any[]>;
 
-  constructor(public db: AngularFireDatabase) {
-    this.items = db.list('items').valueChanges();
-  }
+  constructor(public db: AngularFireDatabase) { }
 
-  onSubmit() {
-    this.db.list('items').push({ content: this.itemValue });
-    this.itemValue = '';
-  }
+ 
 }

@@ -1,28 +1,18 @@
-<div class="container-fluid">
-  <div style="color: blue;">
-    <h1>{{title}}</h1>
-    <h3>{{description}}</h3>
-  </div>
-  <br><br>
+<div class="header">
+  <h2>
+    Podcast Directory
+  </h2>
+</div>
 
-  <div style="width: 50%;">
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="item">Enter your Podcast title</label>
-        <input type="text" class="form-control" placeholder="Enter here..." id="item" required
-          [(ngModel)]="itemValue" name="item">
-      </div>
-      <br><br>
 
-      <div class="btn-group">
-        <button type="submit" class="btn btn-success">Submit</button>
-      </div>
-    </form>
-  </div>
+<div class="adding_podcasts">
+  <form>
+    <input placeholder="enter your podcast here" type="text">
+  </form>
+</div>
 
-  <h2>Your favroute Podcasts</h2>
-  <div class="col-md-3">
-    <pre *ngFor="let item of items | async">{{item.content}}> </pre>
-  </div>
- 
+<div class="area_to_display_saved_list">
+<p>
+  area to display all saved podcast list
+</p>
 </div>

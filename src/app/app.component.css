@@ -1,0 +1,32 @@
+body{
+    padding: 0px;
+    margin: 0px;
+
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: bisque;
+    text-align: center;
+}
+
+.header h2{
+padding-top:40px;
+text-decoration-style: solid;
+   
+}
+
+.adding_podcasts{
+    padding-top: 80px;
+}
+
+.adding_podcasts input[type="text"]{
+    width: 500px;
+    height: 50px;
+}
+
+.area_to_display_saved_list{
+    width: 100%;
+    height: 500px;
+    background-color: lightcoral;
+}
