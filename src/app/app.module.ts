@@ -10,17 +10,17 @@ import { ServiceService } from './service.service';
 
 
 
+
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent,
+],
   imports: [
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // for database
     AppRoutingModule,
-  
+    
     
   ],
   providers: [ServiceService ],

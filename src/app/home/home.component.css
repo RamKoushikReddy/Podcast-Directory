@@ -1,0 +1,40 @@
+body {
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: bisque;
+  text-align: center;
+}
+
+.header h2 {
+  padding-top: 40px;
+  text-decoration-style: solid;
+
+}
+
+.adding_podcasts {
+  padding-top: 80px;
+}
+
+.adding_podcasts input[type="text"] {
+  width: 500px;
+  height: 50px;
+}
+
+button {
+  border-radius: 3px;
+  width: 100px;
+  height: 50px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.area_to_display_saved_list {
+  width: 100%;
+  height: 100%;
+}
