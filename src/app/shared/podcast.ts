@@ -1,5 +1,12 @@
-export interface podcast { 
-    id?: string;
-    title?: string;
-    description?: string;
+export interface Podcast {
+  title?: string;
+  episode?: EpisodesInfo;
+}
+
+export interface EpisodesInfo {
+  date?: string;
+  description?: string;
+  episodeName?: string;
+  runTime?: string;
+  speaker?: string;
 }
