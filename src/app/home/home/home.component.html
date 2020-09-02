@@ -1,1 +1,17 @@
-<button mat-raised-button>Hello World</button>
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
+<ng-container *ngIf="allPodcasts | async; let podcasts" ; else loading>
+  <mat-list>
+    <ng-container *ngFor="let podcast of podcasts; let last = last">
+      <mat-list-item>
+        <h3 matLine>{{ podcast.title }}</h3>
+        <p matLine>
+          {{ podcast.episode.episodeName }}|Speaker:{{
+            podcast.episode.speaker
+          }}
+        </p>
+      </mat-list-item>
+    </ng-container>
+  </mat-list>
+</ng-container>
