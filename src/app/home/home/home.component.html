@@ -1,1 +1,77 @@
-<button mat-raised-button>Hello World</button>
+<mat-toolbar color="primary">
+        <span>Podcast Directory</span>
+</mat-toolbar>
+
+
+<mat-accordion class="form-for-directory" multi>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                podcast data
+            </mat-panel-title>
+            <mat-panel-description>
+                please enter your podcast details to save to your Directory.
+                <mat-icon>check_circle_outline</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <form [formGroup]="podcastdata">
+            <mat-form-field>
+                <mat-label>Podcast title</mat-label>
+                <input matInput type="text" min="3">
+            </mat-form-field>
+            <br><br>
+            <mat-form-field>
+                <mat-label>season</mat-label>
+                <input matInput type="number" min="1">
+            </mat-form-field>
+            <br><br>
+            <mat-form-field>
+                <mat-label>episode number</mat-label>
+                <input matInput type="number" min="1">
+            </mat-form-field>
+            <br><br>
+            <button mat-raised-button color="primary">save</button>
+        </form>
+    </mat-expansion-panel>
+    
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+
+
+            <mat-panel-title>
+                Add podcast reminder
+            </mat-panel-title>
+            <mat-panel-description>
+                Inform the date you wish to get notification about podcast
+                <mat-icon>date_range</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+            <mat-form-field #remindertitle>
+                <mat-label>Podcast title</mat-label>
+                <input matInput type="text" min="3">
+            </mat-form-field>
+            <br><br>
+        <mat-form-field #reminderdate>
+            <mat-label >Date</mat-label>
+            <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+        </mat-form-field>
+        <mat-datepicker #picker></mat-datepicker>
+        <br><br>
+        <button mat-raised-button color="primary" (click)="remindme()">Remind me</button>
+    </mat-expansion-panel>
+</mat-accordion>
+
+<ng-container>
+    <br><br>
+    <mat-card color="primary">
+       <mat-card-title>
+           my podcast Directory
+       </mat-card-title>
+       <mat-card-content>
+           <ul ngfor podcast1 of podcastdir>
+
+           </ul>
+       </mat-card-content>
+    </mat-card>
+</ng-container>
