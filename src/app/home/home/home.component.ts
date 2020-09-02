@@ -19,5 +19,6 @@ export class HomeComponent implements OnInit {
     //   this.allPodcasts = val;
     // });
     this.allPodcasts = this.pd.getPodcasts().pipe(tap(console.log));
+    
   }
 }
