@@ -7,9 +7,16 @@
       <mat-list-item>
         <h3 matLine>{{ podcast.title }}</h3>
         <p matLine>
-          {{ podcast.episode.episodeName }}|Speaker:{{
-            podcast.episode.speaker
-          }}
+          {{ podcast.date }}
+        </p>
+        <p matLine>
+          {{ podcast.description }}
+        </p>
+        <p matLine>
+          {{ podcast.speaker }}
+        </p>
+        <p matLine>
+          {{ podcast.runtime }}
         </p>
       </mat-list-item>
     </ng-container>
