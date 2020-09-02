@@ -1,29 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
-import { AppRoutingModule} from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { ServiceService } from './service.service';
-
-
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent,
-],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule, // for database
+    // AngularFirestoreModule, // for database
     AppRoutingModule,
-    
-    
+    BrowserAnimationsModule,
+    AngularFireDatabaseModule,
   ],
-  providers: [ServiceService ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
