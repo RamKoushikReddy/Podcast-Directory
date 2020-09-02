@@ -1,24 +1,33 @@
+<div class="header">
+  <h2>
+    Podcast Directory
+  </h2>
+</div>
+
 <ng-template #loading>
   <p>Loading...</p>
 </ng-template>
 <ng-container *ngIf="allPodcasts | async; let podcasts" ; else loading>
   <mat-list>
+    <div class="podcast">
     <ng-container *ngFor="let podcast of podcasts; let last = last">
       <mat-list-item>
-        <h3 matLine>{{ podcast.title }}</h3>
+        <h3 matLine>{{ podcast.title }}</h3><br><br>
         <p matLine>
           {{ podcast.date }}
-        </p>
+        </p><br><br>
         <p matLine>
           {{ podcast.description }}
-        </p>
+        </p><br><br>
         <p matLine>
           {{ podcast.speaker }}
-        </p>
+        </p><br><br>
         <p matLine>
           {{ podcast.runtime }}
         </p>
       </mat-list-item>
+      
     </ng-container>
+    </div>
   </mat-list>
 </ng-container>
